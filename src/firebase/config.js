@@ -10,13 +10,6 @@ const firebaseConfig = {
   appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
-// 🔥 AGREGAR ESTO
-export const hasFirebaseConfig =
-  !!import.meta.env.VITE_FIREBASE_API_KEY &&
-  !!import.meta.env.VITE_FIREBASE_AUTH_DOMAIN &&
-  !!import.meta.env.VITE_FIREBASE_PROJECT_ID;
-
 const app = initializeApp(firebaseConfig);
 
 export const db = getFirestore(app);
-
